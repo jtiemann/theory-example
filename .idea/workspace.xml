@@ -29,7 +29,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="57" selection-start="98" selection-end="98" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="795">
+            <state line="39" column="23" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="795">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="world.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/world.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -38,10 +47,10 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="8" selection-start="955" selection-end="955" vertical-scroll-proportion="0.3987667" vertical-offset="167" max-vertical-offset="1140">
+            <state line="43" column="41" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.49126413" vertical-offset="167" max-vertical-offset="1140">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#2036#2613#0" expanded="false" />
+                <element signature="e#2010#2587#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,7 +68,7 @@
       <file leaf-file-name="wordplay.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wordplay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="83" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+            <state line="24" column="19" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -210,12 +219,18 @@
       <created>1396204445963</created>
       <updated>1396204445963</updated>
     </task>
+    <task id="LOCAL-00001" summary="better search start">
+      <created>1396232119784</created>
+      <updated>1396232119784</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1088" y="39" width="773" height="1106" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -247,25 +262,13 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="better search start" />
+    <option name="LAST_COMMIT_MESSAGE" value="better search start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="57" selection-start="98" selection-end="98" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordplay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="83" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="23" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1320">
@@ -273,12 +276,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="23" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/world.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="19" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="8" selection-start="955" selection-end="955" vertical-scroll-proportion="0.3987667" vertical-offset="167" max-vertical-offset="1140">
+        <state line="43" column="41" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.49126413" vertical-offset="167" max-vertical-offset="1140">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2036#2613#0" expanded="false" />
+            <element signature="e#2010#2587#0" expanded="false" />
           </folding>
         </state>
       </provider>
