@@ -45,7 +45,7 @@ go.onclick = function(evt){
 }
 
 regex.onkeyup = function(evt){
-  if (regex.value.match(/[a-zA-Z]/g).length >= 3){  //todo: debounce
+  if (regex.value.match(/[a-zA-Z]/g).length >= 3){  //todo: debounce, cache searches (ie memoize matchRegex)
       word_matches.innerHTML = theory.gb.
         matchRegex(new RegExp(regex.value)).
         map(function(unit){
