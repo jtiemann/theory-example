@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<header>
+    <h3> WordPlay </h3>
+</header>
+
+	<div id="main">
+
+        <nav>
+            <div>
+                <select id='game_type'><select>
+                <input id='word' placeholder='a word please'/>
+                <button id="go">go</button>
+            </div>
+                <label>Dictionary Search:</label>
+                <input id='regex' placeholder='a regex please'/>
+                <button id="go_regex">search</button>
+        </nav>
+       <article>
+           <div id="wikiInfo">&nbsp; contents</div>
+       </article>
+
+        <aside>
+            <p id='word_matches' title="tooltip?"></p>
+
+        </aside>
+    </div>
+
+<footer>digitalpersonae, 2014&copy;</footer>
+<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="./theory.js"></script>
+<!--<script src="./imports.js"></script>-->
+<script src="./world.js"></script>
+<!-- <script src="./wordplay.js"></script>-->
+<script src="./main.js"></script>
+</body>
+
+
+</html>
+
