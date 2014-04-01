@@ -75,7 +75,7 @@ regex.onkeyup = throttle(function(evt){
           return '<i>' + unit + '</i>'
       }).join(" ")
   }
-}, 500)
+}, 1000)
 
 $('body').on('click', 'i',
    function(evt){
