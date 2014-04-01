@@ -35,6 +35,29 @@ $(game_type).html('<option value="jumble">Jumble</option><option value="reversee
     }
   };
 
+  function throttle(fn, threshhold, scope) {
+    threshhold || (threshhold = 250);
+    var last,
+      deferTimer;
+    return function () {
+      var context = scope || this;
+
+      var now = +new Date,
+        args = arguments;
+      if (last && now < last + threshhold) {
+        // hold on to it
+        clearTimeout(deferTimer);
+        deferTimer = setTimeout(function () {
+          last = now;
+          return fn.apply(context, args);
+        }, threshhold);
+      } else {
+        last = now;
+        return fn.apply(context, args);
+      }
+    };
+  }
+
 //EVENTS
 go.onclick = function(evt){
   //alert("I will now jumble " + evt.currentTarget.value)
@@ -44,15 +67,15 @@ go.onclick = function(evt){
   //evt.currentTarget.value = evt.currentTarget.value.split(" ").map(function(unit){return unit.split("").shuffle().join("");}).join(" ")
 }
 
-regex.onkeyup = function(evt){
-  if (regex.value.match(/[a-zA-Z]/g) && regex.value.match(/[a-zA-Z]/g).length >= 3){  //todo: debounce, cache searches (ie memoize matchRegex)
+regex.onkeyup = throttle(function(evt){
+  if (regex.value.match(/[a-zA-Z]/g) && regex.value.match(/[a-zA-Z]/g).length >= 3){  //done: throttle, done: cache searches (ie memoize matchRegex)
       word_matches.innerHTML = theory.gb.
         memoizedMatchRegex(new RegExp(regex.value)).
         map(function(unit){
           return '<i>' + unit + '</i>'
       }).join(" ")
   }
-}
+}, 500)
 
 $('body').on('click', 'i',
    function(evt){

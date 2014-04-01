@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4837cf4f-c07b-4d15-b415-db2b753951c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordplay.js" afterPath="$PROJECT_DIR$/wordplay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="theory-example.iws" />
@@ -44,19 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1335">
+            <state line="77" column="4" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.78417265" vertical-offset="377" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wordplay.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wordplay.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wordplay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1334" selection-end="1421" vertical-scroll-proportion="0.30425963" vertical-offset="240" max-vertical-offset="1350">
+            <state line="61" column="0" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
       <list>
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/wordplay.js" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -211,7 +211,11 @@
       <created>1396325684006</created>
       <updated>1396325684006</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="cache[key] replaces hasOwnProperty.call(cache,key)">
+      <created>1396326901814</created>
+      <updated>1396326901814</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -256,7 +260,8 @@
     <MESSAGE value="close select missing" />
     <MESSAGE value="spelling" />
     <MESSAGE value="memoized search" />
-    <option name="LAST_COMMIT_MESSAGE" value="memoized search" />
+    <MESSAGE value="cache[key] replaces hasOwnProperty.call(cache,key)" />
+    <option name="LAST_COMMIT_MESSAGE" value="cache[key] replaces hasOwnProperty.call(cache,key)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -370,16 +375,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/wordplay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1335">
+        <state line="61" column="0" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wordplay.js">
+    <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1334" selection-end="1421" vertical-scroll-proportion="0.30425963" vertical-offset="240" max-vertical-offset="1350">
+        <state line="77" column="4" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.78417265" vertical-offset="377" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>
