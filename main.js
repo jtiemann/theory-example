@@ -22,49 +22,48 @@ Array.prototype.shuffle = function() {
   return array;
 };
 
-$(document).ready(function() { 
-//INIT 
-$(game_type).html('<option value="jumble">Jumble</option><option value="reversee">Reversee</option>')
+function throttle(fn, threshhold, scope) {
+  threshhold || (threshhold = 250);
+  var last,
+    deferTimer;
+  return function () {
+    var context = scope || this;
 
-  // a generic delay before calling a function
-  function genericDelay(fn, ms) {
-    var timer;
-    return function() {
-      clearTimeout(timer);
-      timer = setTimeout(fn, ms || 500);
-    }
-  };
-
-  function throttle(fn, threshhold, scope) {
-    threshhold || (threshhold = 250);
-    var last,
-      deferTimer;
-    return function () {
-      var context = scope || this;
-
-      var now = +new Date,
-        args = arguments;
-      if (last && now < last + threshhold) {
-        // hold on to it
-        clearTimeout(deferTimer);
-        deferTimer = setTimeout(function () {
-          last = now;
-          return fn.apply(context, args);
-        }, threshhold);
-      } else {
+    var now = +new Date,
+      args = arguments;
+    if (last && now < last + threshhold) {
+      // hold on to it
+      clearTimeout(deferTimer);
+      deferTimer = setTimeout(function () {
         last = now;
         return fn.apply(context, args);
-      }
-    };
-  }
+      }, threshhold);
+    } else {
+      last = now;
+      return fn.apply(context, args);
+    }
+  };
+}
+
+$(document).ready(function() { 
+//INIT 
+$(game_type).html('<option value="unjumble">Unjumble</option>' +
+  '<option value="bigunjumble">theBigUnJumble</option>' +
+  '<option value="jumble">Jumble</option>' +
+  '<option value="reversee">Reversee</option>')
 
 //EVENTS
 go.onclick = function(evt){
-  //alert("I will now jumble " + evt.currentTarget.value)
-  word.value = theory.gb.games.
-    filter(function(unit, index){return unit[game_type.value] }).
-    map(function(unit){return unit[game_type.value] })[0](word.value)
-  //evt.currentTarget.value = evt.currentTarget.value.split(" ").map(function(unit){return unit.split("").shuffle().join("");}).join(" ")
+  if (game_type.value.match(/unjumble/)) {
+    word_matches.innerHTML = theory.gb.games.
+      filter(function(unit, index){return unit[game_type.value] }).
+      map(function(unit){return unit[game_type.value] })[0](word.value)
+  }
+  else {
+    word.value = theory.gb.games.
+      filter(function(unit, index){return unit[game_type.value] }).
+      map(function(unit){return unit[game_type.value] })[0](word.value)
+  }
 }
 
 regex.onkeyup = throttle(function(evt){

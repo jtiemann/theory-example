@@ -43,7 +43,49 @@ module.exports = require('theory')
         }
         memoized.cache = {};
         return memoized;
+      },
+      anagramRegexGenerator = function (input) {
+        //http://stackoverflow.com/questions/7458319/is-it-possible-to-generate-a-compact-regular-expression-for-an-anagram-of-an-a
+      var lookaheadPart = '';
+      var matchingPart = '^';
+      var positiveLookaheadPrefix='(?=';
+      var positiveLookaheadSuffix=')';
+      var inputCharacterFrequencyMap = {}
+      for ( var i = 0; i< input.length; i++ )
+      {
+        if (!inputCharacterFrequencyMap[input[i]]) {
+          inputCharacterFrequencyMap[input[i]] = 1
+        } else {
+          ++inputCharacterFrequencyMap[input[i]];
+        }
       }
+      for ( var j in inputCharacterFrequencyMap) {
+        lookaheadPart += positiveLookaheadPrefix;
+        for (var k = 0; k< inputCharacterFrequencyMap[j]; k++) {
+          lookaheadPart += '.*';
+          if (j == ' ') {
+            lookaheadPart += '\\s';
+          } else {
+            lookaheadPart += j;
+          }
+          matchingPart += '.';
+        }
+        lookaheadPart += positiveLookaheadSuffix;
+      }
+      matchingPart += '$';
+      return lookaheadPart + matchingPart;
+      },
+      combinations = function(set) {
+        //https://gist.github.com/jpillora/4435759
+      return (function acc(xs, set) {
+        var x = xs[0];
+        if(typeof x === "undefined")
+          return set;
+        for(var i = 0, l = set.length; i < l; ++i)
+          set.push(set[i].concat(x));
+        return acc(xs.slice(1), set);
+      })(set, [[]]).slice(1);
+    };
 
     //HELPER FUNCTIONS [NO SIDE EFFECTS] well...except writing to localStorage
     wordplay.getWords = (function() {
@@ -66,6 +108,29 @@ module.exports = require('theory')
       }).join(" ")
     }
 
+    wordplay.theUnjumblerfn = function(word) {
+      initWordArray()
+      var rx = new RegExp(anagramRegexGenerator(word));
+      return gWordArr.filter(function(unit){return rx.test(unit)}).join(" ")
+    }
+
+    wordplay.wordArrOfCombinations = function(word){
+      return combinations(word).
+        filter(function(unit, index){return unit.length>3}).
+        map(function(unit){return unit.reduce(function(word, letter){return word.concat(letter)},"") })
+    }
+
+    wordplay.theBigUnjumblerfn = function(word) {
+      initWordArray()
+      return wordplay.
+        wordArrOfCombinations(word).
+        reduce(function(sum,unit){
+          var rx = new RegExp(anagramRegexGenerator(unit));
+          return sum += gWordArr.
+                          filter(function(gWord){return rx.test(gWord)}).
+                          join(" ") + " "
+         },"")
+    }
     wordplay.reversee = function(word) {
       return word.split(" ").map(function(unit) {
         return unit.split("").reverse().join("");
@@ -75,6 +140,10 @@ module.exports = require('theory')
     //INIT
     wordplay.games = [
       {"jumble": wordplay.theJumblerfn},
+      {"unjumble": wordplay.theUnjumblerfn},
+      {"bigunjumble": wordplay.theBigUnjumblerfn},
+
+
       {"reversee": wordplay.reversee}
     ]
 
