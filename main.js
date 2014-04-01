@@ -21,6 +21,17 @@ Array.prototype.shuffle = function() {
   }
   return array;
 };
+Array.prototype.getUnique = function(){
+  var u = {}, a = [];
+  for(var i = 0, l = this.length; i < l; ++i){
+    if(u.hasOwnProperty(this[i])) {
+      continue;
+    }
+    a.push(this[i]);
+    u[this[i]] = 1;
+  }
+  return a;
+}
 
 function throttle(fn, threshhold, scope) {
   threshhold || (threshhold = 250);
@@ -63,7 +74,7 @@ go.onclick = function(evt){
           return unit.map(function(word){
             return '<i>' + word + '</i>'
           }).join(" ")
-       }).join(" ")
+       }).getUnique().join(" ")
   }
   else {
     word.value = theory.gb.games.

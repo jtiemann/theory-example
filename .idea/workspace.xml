@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4837cf4f-c07b-4d15-b415-db2b753951c6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordplay.js" afterPath="$PROJECT_DIR$/wordplay.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="theory-example.iws" />
@@ -48,12 +47,13 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="42" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.21298175" vertical-offset="0" max-vertical-offset="986">
+            <state line="66" column="27" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.21298175" vertical-offset="0" max-vertical-offset="986">
               <folding>
                 <element signature="e#63#601#0" expanded="false" />
+                <element signature="e#641#828#0" expanded="false" />
                 <element signature="n#!!block;n#throttle#0" expanded="false" />
-                <element signature="e#2153#2403#0" expanded="false" />
-                <element signature="e#2457#3391#0" expanded="false" />
+                <element signature="e#2391#2641#0" expanded="false" />
+                <element signature="e#2695#3629#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -244,7 +244,11 @@
       <created>1396376170145</created>
       <updated>1396376170145</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="improve bigunjumble">
+      <created>1396379376010</created>
+      <updated>1396379376010</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -293,7 +297,8 @@
     <MESSAGE value="adds throttle of 500 ms to dict search" />
     <MESSAGE value="improved caching/throttling" />
     <MESSAGE value="adds unjunmble and bigUnjumble...weeee!" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds unjunmble and bigUnjumble...weeee!" />
+    <MESSAGE value="improve bigunjumble" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve bigunjumble" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -318,9 +323,10 @@
         <state line="57" column="6" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1695">
           <folding>
             <element signature="e#63#601#0" expanded="false" />
+            <element signature="e#641#828#0" expanded="false" />
             <element signature="n#!!block;n#throttle#0" expanded="false" />
-            <element signature="e#2153#2403#0" expanded="false" />
-            <element signature="e#2457#3391#0" expanded="false" />
+            <element signature="e#2391#2641#0" expanded="false" />
+            <element signature="e#2695#3629#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -362,9 +368,10 @@
         <state line="47" column="107" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1335">
           <folding>
             <element signature="e#63#601#0" expanded="false" />
+            <element signature="e#641#828#0" expanded="false" />
             <element signature="n#!!block;n#throttle#0" expanded="false" />
-            <element signature="e#2153#2403#0" expanded="false" />
-            <element signature="e#2457#3391#0" expanded="false" />
+            <element signature="e#2391#2641#0" expanded="false" />
+            <element signature="e#2695#3629#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -406,9 +413,10 @@
         <state line="42" column="38" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1320">
           <folding>
             <element signature="e#63#601#0" expanded="false" />
+            <element signature="e#641#828#0" expanded="false" />
             <element signature="n#!!block;n#throttle#0" expanded="false" />
-            <element signature="e#2153#2403#0" expanded="false" />
-            <element signature="e#2457#3391#0" expanded="false" />
+            <element signature="e#2391#2641#0" expanded="false" />
+            <element signature="e#2695#3629#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -450,9 +458,10 @@
         <state line="43" column="41" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1335">
           <folding>
             <element signature="e#63#601#0" expanded="false" />
+            <element signature="e#641#828#0" expanded="false" />
             <element signature="n#!!block;n#throttle#0" expanded="false" />
-            <element signature="e#2153#2403#0" expanded="false" />
-            <element signature="e#2457#3391#0" expanded="false" />
+            <element signature="e#2391#2641#0" expanded="false" />
+            <element signature="e#2695#3629#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -519,12 +528,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="42" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.21298175" vertical-offset="0" max-vertical-offset="986">
+        <state line="66" column="27" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.21298175" vertical-offset="0" max-vertical-offset="986">
           <folding>
             <element signature="e#63#601#0" expanded="false" />
+            <element signature="e#641#828#0" expanded="false" />
             <element signature="n#!!block;n#throttle#0" expanded="false" />
-            <element signature="e#2153#2403#0" expanded="false" />
-            <element signature="e#2457#3391#0" expanded="false" />
+            <element signature="e#2391#2641#0" expanded="false" />
+            <element signature="e#2695#3629#0" expanded="false" />
           </folding>
         </state>
       </provider>
