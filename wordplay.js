@@ -116,7 +116,7 @@ module.exports = require('theory')
 
     wordplay.wordArrOfCombinations = function(word){
       return combinations(word).
-        filter(function(unit, index){return unit.length>3}).
+        filter(function(unit, index){return unit.length>=5}).
         map(function(unit){return unit.reduce(function(word, letter){return word.concat(letter)},"") })
     }
 
@@ -126,10 +126,9 @@ module.exports = require('theory')
         wordArrOfCombinations(word).
         reduce(function(sum,unit){
           var rx = new RegExp(anagramRegexGenerator(unit));
-          return sum += gWordArr.
-                          filter(function(gWord){return rx.test(gWord)}).
-                          join(" ") + " "
-         },"")
+          sum.push(gWordArr. filter(function(gWord){return rx.test(gWord)}));
+          return sum
+        },[])
     }
     wordplay.reversee = function(word) {
       return word.split(" ").map(function(unit) {

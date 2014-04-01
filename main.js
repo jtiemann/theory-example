@@ -55,9 +55,15 @@ $(game_type).html('<option value="unjumble">Unjumble</option>' +
 //EVENTS
 go.onclick = function(evt){
   if (game_type.value.match(/unjumble/)) {
-    word_matches.innerHTML = theory.gb.games.
+    var arrOfArrOfWords = theory.gb.games.
       filter(function(unit, index){return unit[game_type.value] }).
       map(function(unit){return unit[game_type.value] })[0](word.value)
+
+    word_matches.innerHTML = arrOfArrOfWords.map(function(unit){
+          return unit.map(function(word){
+            return '<i>' + word + '</i>'
+          }).join(" ")
+       }).join(" ")
   }
   else {
     word.value = theory.gb.games.
