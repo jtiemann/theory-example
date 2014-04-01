@@ -111,7 +111,7 @@ module.exports = require('theory')
     wordplay.theUnjumblerfn = function(word) {
       initWordArray()
       var rx = new RegExp(anagramRegexGenerator(word));
-      return gWordArr.filter(function(unit){return rx.test(unit)}).join(" ")
+      return gWordArr.filter(function(unit){return rx.test(unit)})
     }
 
     wordplay.wordArrOfCombinations = function(word){
@@ -130,6 +130,7 @@ module.exports = require('theory')
           return sum
         },[])
     }
+
     wordplay.reversee = function(word) {
       return word.split(" ").map(function(unit) {
         return unit.split("").reverse().join("");

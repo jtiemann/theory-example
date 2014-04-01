@@ -32,6 +32,14 @@ Array.prototype.getUnique = function(){
   }
   return a;
 }
+Array.prototype.flatten = function flatten(){
+  var flat = [];
+  for (var i = 0, l = this.length; i < l; i++){
+    var type = Object.prototype.toString.call(this[i]).split(' ').pop().split(']').shift().toLowerCase();
+    if (type) { flat = flat.concat(/^(array|collection|arguments|object)$/.test(type) ? flatten.call(this[i]) : this[i]); }
+  }
+  return flat;
+};
 
 function throttle(fn, threshhold, scope) {
   threshhold || (threshhold = 250);
@@ -65,16 +73,24 @@ $(game_type).html('<option value="unjumble">Unjumble</option>' +
 
 //EVENTS
 go.onclick = function(evt){
-  if (game_type.value.match(/unjumble/)) {
+  if (game_type.value === "bigunjumble") {
     var arrOfArrOfWords = theory.gb.games.
       filter(function(unit, index){return unit[game_type.value] }).
       map(function(unit){return unit[game_type.value] })[0](word.value)
 
-    word_matches.innerHTML = arrOfArrOfWords.map(function(unit){
-          return unit.map(function(word){
-            return '<i>' + word + '</i>'
-          }).join(" ")
-       }).getUnique().join(" ")
+      word_matches.innerHTML = arrOfArrOfWords.flatten().sort().map(function(unit){
+            return '<i>' + unit + '</i>'
+          }).
+           getUnique().
+           join(" ")
+  }
+  else if (game_type.value === "unjumble") {
+    word_matches.innerHTML =  theory.gb.games.
+      filter(function(unit, index){return unit[game_type.value] }).
+      map(function(unit){return unit[game_type.value] })[0](word.value).sort().
+      map(function(word){
+        return '<i>' + word + '</i>'
+      }).join(" ")
   }
   else {
     word.value = theory.gb.games.
