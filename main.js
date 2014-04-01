@@ -45,16 +45,16 @@ go.onclick = function(evt){
 }
 
 regex.onkeyup = function(evt){
-  if (regex.value.match(/[a-zA-Z]/g).length >= 3){  //todo: debounce, cache searches (ie memoize matchRegex)
+  if (regex.value.match(/[a-zA-Z]/g) && regex.value.match(/[a-zA-Z]/g).length >= 3){  //todo: debounce, cache searches (ie memoize matchRegex)
       word_matches.innerHTML = theory.gb.
-        matchRegex(new RegExp(regex.value)).
+        memoizedMatchRegex(new RegExp(regex.value)).
         map(function(unit){
           return '<i>' + unit + '</i>'
       }).join(" ")
   }
 }
 
- $('body').on('click', 'i',
+$('body').on('click', 'i',
    function(evt){
      if (evt.type == 'click'){
        evt.currentTarget.style.fontStyle = "bold"
@@ -73,10 +73,11 @@ regex.onkeyup = function(evt){
            else {
              $('#wikiInfo').html("No Definition at Wiktionary");
            }
-
-       })
-     }}
-     )
+         }
+       )
+     }
+   }
+)
 
 })
 
