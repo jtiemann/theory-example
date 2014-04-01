@@ -34,10 +34,10 @@ module.exports = require('theory')
         var memoized = function() {
           var cache = memoized.cache,
           key = resolver ? resolver.apply(this, arguments) : keyPrefix + arguments[0];
-//         console.log(hasOwnProperty.call(cache, key)
+//         console.log(cache[key]
 //           ? "cache hit"
 //           : "cache miss")
-          return hasOwnProperty.call(cache, key)
+          return cache[key]
             ? cache[key]
             : (cache[key] = func.apply(this, arguments));
         }
