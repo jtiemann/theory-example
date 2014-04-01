@@ -81,7 +81,7 @@ header, footer {
     }
 
     #main > nav, header, footer {
-        min-height: 75px;
-        max-height: 75px;
+        min-height: 100px;
+        max-height: 100px;
     }
 }
